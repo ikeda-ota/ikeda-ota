@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>池田硝子工業所 太田工場</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #222; /* 背景色をダークに */
+      font-family: Arial, sans-serif;
+    }
+    
+    /* ヘッダーのスタイル */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000; /* ヘッダーの背景色を黒に変更 */
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header img {
+      height: 60px; /* 元の50pxから120%に拡大 */
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    /* タイルメニューのスタイル */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 横に3つタイルを並べる */
+      grid-template-rows: auto;
+      gap: 20px; /* タイル間のスペース */
+      width: 90vw;
+      height: 80vh;
+      margin: 20px auto; /* 上下中央寄せ */
+    }
+
+    .tile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0078D7; /* Windows 10のブルーに近い色 */
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .tile:hover {
+      transform: scale(1.05); /* ホバー時に少し拡大 */
+      background-color: #005A9E; /* ホバー時に少し暗めのブルーに */
+    }
+
+    .tile img {
+      width: 200px; /* アイコンの幅を200pxに設定 */
+      height: 200px; /* アイコンの高さを200pxに設定 */
+    }
+
+    .tile p {
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* 画面サイズに応じたレスポンシブデザイン */
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr); /* タブレットでは2列表示 */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr; /* スマホでは1列表示 */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー部分にロゴとタイトルを表示 -->
+  <header>
+    <img src="ikeda.bmp" alt="ロゴ">
+    <h1>池田硝子工業所 太田工場</h1>
+  </header>
+
+  <!-- タイルメニューの部分 -->
+  <div class="container">
+    <a href="page1.html" class="tile">
+      <div>
+        <img src="folder.svg" alt="フォルダ">
+        <p>フォルダ</p>
+      </div>
+    </a>
+    <a href="page2.html" class="tile">
+      <div>
+        <img src="garbage.svg" alt="ゴミ箱">
+        <p>ゴミ箱</p>
+      </div>
+    </a>
+    <a href="page3.html" class="tile">
+      <div>
+        <img src="guard.svg" alt="ガード">
+        <p>ガード</p>
+      </div>
+    </a>
+    <a href="page4.html" class="tile">
+      <div>
+        <img src="monitor.svg" alt="モニター">
+        <p>モニター</p>
+      </div>
+    </a>
+    <a href="page5.html" class="tile">
+      <div>
+        <img src="tools.svg" alt="ツール">
+        <p>ツール</p>
+      </div>
+    </a>
+    <a href="page6.html" class="tile">
+      <div>
+        <img src="triangularcone.svg" alt="コーン">
+        <p>コーン</p>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>
